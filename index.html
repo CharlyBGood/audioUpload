@@ -5,10 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>capitulo15-d3</title>
+    <title>Audio y contenido Form</title>
   </head>
   <body>
-    <input type="file" id="file" multiple />
+    <h1>Form para agregar audios y descrpicion</h1>
+    <div class="main-form">      
+      <form action="POST" class="form-container">
+        <input type="file" id="audio-file" multiple />
+        <input type="text" name="name" placeholder="Título" />
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="Agregar descripción"
+        ></textarea>
+
+        <button>Cargar</button>
+      </form>
+    </div>
+
+    <hr />
+
+    <h1>Form para agregar imagenes, links y descripción</h1>
+    <main class="main-form">
+      <form id="form-container" class="form-container" method="post">
+        <input type="file" id="img-file" multiple />
+        <input
+          type="text"
+          name="form-title"
+          id="form-title"
+          class="form-title"
+          placeholder="Título"
+          oninvalid="this.setCustomValidity('Please complete this field with a title')"
+          oninput="this.setCustomValidity('')"
+          required
+        />    
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="Agregar descripción"
+        ></textarea>    
+        <input
+          type="url"
+          name="form-content"
+          id="form-content"
+          class="form-content"
+          placeholder="URL"
+          oninvalid="this.setCustomValidity('You need to complete this field with a valid URL')"
+          oninput="this.setCustomValidity('')"
+          required
+        />
+        <button class="form-btn" id="form-btn">
+          <i class="fas fa-share-square"></i>
+          Add
+        </button>
+      </form>
+    </main>
+
     <div class="result"></div>
 
     <script src="main.js"></script>
