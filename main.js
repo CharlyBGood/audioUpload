@@ -12,8 +12,8 @@ const fileReader = (ar) => {
     reader.addEventListener("load", (e) => {
       let newAudio = `<audio controls src='${e.currentTarget.result}'>`;
       let titleOne = `<h1 contenteditable="true">Modifica este título</h1>`;
-      document.querySelector(".resultado").innerHTML += titleOne;
-      document.querySelector(".resultado").innerHTML += newAudio += "<hr>";
+      document.querySelector(".result").innerHTML += titleOne;
+      document.querySelector(".result").innerHTML += newAudio += "<hr>";
     });
   }
 };
