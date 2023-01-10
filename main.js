@@ -14,7 +14,7 @@ const fileReader = (ar) => {
     const reader = new FileReader();
     reader.readAsDataURL(ar[i]);
     reader.addEventListener("load", (e) => {
-      let newAudio = `<audio controls src='${e.currentTarget.result}'>`;
+      let newAudio = `<audio controls controlsList="nodownload" src='${e.currentTarget.result}'>`;
 
       result.style.display = "flex";
       // result.innerHTML += titleOne;

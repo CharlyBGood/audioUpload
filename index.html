@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Form para agregar audios y descrpicion</h1>
-    <div class="main-form">      
+    <div class="main-form">
       <form action="POST" class="form-container">
         <input type="file" id="audio-file" multiple />
         <input type="text" name="name" placeholder="Título" />
@@ -20,11 +20,10 @@
           rows="10"
           placeholder="Agregar descripción"
         ></textarea>
-
         <button>Cargar</button>
       </form>
     </div>
-
+    <div class="result"></div>
     <hr />
 
     <h1>Form para agregar imagenes, links y descripción</h1>
@@ -40,14 +39,14 @@
           oninvalid="this.setCustomValidity('Please complete this field with a title')"
           oninput="this.setCustomValidity('')"
           required
-        />    
+        />
         <textarea
           name="description"
           id="description"
           cols="30"
           rows="10"
           placeholder="Agregar descripción"
-        ></textarea>    
+        ></textarea>
         <input
           type="url"
           name="form-content"
@@ -64,8 +63,6 @@
         </button>
       </form>
     </main>
-
-    <div class="result"></div>
 
     <script src="main.js"></script>
   </body>
