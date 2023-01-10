@@ -8,24 +8,29 @@
     <title>Audio y contenido Form</title>
   </head>
   <body>
-    <h1>Form para agregar audios y descrpicion</h1>
+    <h1>Form para agregar audios y descripcion</h1>
     <div class="main-form">
-      <form id="uploadForm" action="POST" enctype="multipart/form-data" class="form-container">
+      <form
+        id="uploadForm"
+        action="POST"
+        enctype="multipart/form-data"
+        class="form-container"
+      >
         <input type="file" name="audio-file" id="audio-file" multiple />
-        <input type="text" name="name" placeholder="Título" />
+        <!-- <input type="text" name="title" id="title" placeholder="Título" />
         <textarea
           name="description"
           id="description"
           cols="30"
           rows="10"
           placeholder="Agregar descripción"
-        ></textarea>
-        <input type="submit" value="Subit archivo">
+        ></textarea> -->
+        <input type="submit" value="Subir archivo" />
       </form>
     </div>
     <div class="result"></div>
     <hr />
-<!-- 
+    <!-- 
     <h1>Form para agregar imagenes, links y descripción</h1>
     <main class="main-form">
       <form id="form-container" class="form-container" method="post">
