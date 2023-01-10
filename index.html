@@ -10,8 +10,8 @@
   <body>
     <h1>Form para agregar audios y descrpicion</h1>
     <div class="main-form">
-      <form action="POST" class="form-container">
-        <input type="file" id="audio-file" multiple />
+      <form id="uploadForm" action="POST" enctype="multipart/form-data" class="form-container">
+        <input type="file" name="audio-file" id="audio-file" multiple />
         <input type="text" name="name" placeholder="Título" />
         <textarea
           name="description"
@@ -20,12 +20,12 @@
           rows="10"
           placeholder="Agregar descripción"
         ></textarea>
-        <button>Cargar</button>
+        <input type="submit" value="Subit archivo">
       </form>
     </div>
     <div class="result"></div>
     <hr />
-
+<!-- 
     <h1>Form para agregar imagenes, links y descripción</h1>
     <main class="main-form">
       <form id="form-container" class="form-container" method="post">
@@ -62,7 +62,7 @@
           Add
         </button>
       </form>
-    </main>
+    </main> -->
 
     <script src="main.js"></script>
   </body>
